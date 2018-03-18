@@ -1,11 +1,18 @@
+
+//First illusion variables
 int current = 1, illusions = 7;
 int depthStop;
 int isometryCount;
 float globalAngle;
 
+//Second illusion variables
+int secondQuadrantPosition = 100;
+int forthQuadrantPosition = 400;
+boolean separateEllipses = false;
+
 
 void setup() {
-  size(800, 800, P2D);
+  size(500, 500, P2D);
   smooth();
   noStroke();
   
@@ -30,7 +37,7 @@ void draw() {
     break;
     // implement from here. Don't forget to add break for each case
   case 2:
-    //goi();
+    illusory();
     break;
   case 3:
     //disjointed_arch();
@@ -57,6 +64,8 @@ void keyPressed() {
     current = current < illusions ? current+1 : 1;
 }
 
+
+//First illusion -> Hidden patterns
 void recurse(float posX, float posY, float rad, float ang, int depth) {
   if (depth < depthStop) {
     float angleSegment = TWO_PI/isometryCount;   // Separation angle between figures
@@ -77,4 +86,43 @@ void recurse(float posX, float posY, float rad, float ang, int depth) {
 void mouseReleased() {
   depthStop++;
   if (depthStop >= 7) depthStop = 1;
+}
+
+//Second illusion illusory square
+void illusory(){
+  background(0);
+  rectMode(CENTER);
+  stroke(255);
+  noFill();
+  rect(250, 250, 150, 150);
+  
+  if (secondQuadrantPosition>=165) {
+    separateEllipses = true;
+  }
+  if (secondQuadrantPosition==100) {
+    separateEllipses = false;
+  }
+  if (separateEllipses == false) {
+    secondQuadrantPosition++;
+    forthQuadrantPosition--;
+  }
+  else {
+    secondQuadrantPosition--;
+    forthQuadrantPosition++;
+  }
+  noStroke();
+  //Large ellipses
+  
+  fill(100);
+  ellipse(secondQuadrantPosition, 250, 100, 100);//left
+  ellipse(250, secondQuadrantPosition, 100, 100);//up
+  ellipse(forthQuadrantPosition, 250, 100, 100);//right
+  ellipse(250, forthQuadrantPosition, 100, 100);//down
+  
+  //small ellipses
+  fill(210);
+  ellipse(secondQuadrantPosition+190, 250, 20, 20);//R
+  ellipse(250, secondQuadrantPosition+190, 20, 20);//D
+  ellipse(forthQuadrantPosition-190, 250, 20, 20);//l
+  ellipse(250, forthQuadrantPosition-190, 20, 20);//U
 }
