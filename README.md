@@ -15,7 +15,9 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+| Miguel Ángel Ballén | mballeng91 |
+| Tania Hurtado| TaniaHurtado|
+| Ivan Rojas | idrojasf |
 
 ## Discusión
 
