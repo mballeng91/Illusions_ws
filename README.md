@@ -25,7 +25,7 @@ Complete la tabla:
 
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
-| Hidden_Patterns | Interactivo | Hacer click para ver el patrón de fractal hasta el nivel 7 de recursión | https://www.openprocessing.org/sketch/64573 |
+| Hidden_Patterns | Interactivo | https://es.wikipedia.org/wiki/Copo_de_nieve_de_Koch | Hacer click para ver el patrón de fractal hasta el nivel 7 de recursión  | https://www.openprocessing.org/sketch/64573|
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
