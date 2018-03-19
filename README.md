@@ -55,7 +55,7 @@ Complete la tabla:
     
     En cuanto a la apreciación de las diferetnes ilusiones opticas, las que estan enfocadas en la parte paradojica o perspectiva hacen que la intriga sea mayor, debido a que se pueden apreciar diferentes visiones identificando ciertas  nociones de historias o momentos.
     
-    Bastante curioso como la ilusión de las bananas nos hace asumir que hay pixeles amarillos
+    Es curioso como la ilusión de las bananas nos hace asumir que hay pixeles amarillos
     cuando esto en realidad no es cierto. Si se analiza la imagen dependiendo los colores al rededor
     se puede obtener una percepción distinta sobre los pixeles correspondientes a las bananas.
     
