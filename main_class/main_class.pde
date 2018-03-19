@@ -439,7 +439,7 @@ void function(){
 }
 
 void fourth(){
-  frame.setSize(302,302);
+  surface.setSize(302,302);
   background(1);
   a=302;b=152;
   for(i=0;i<=b*b;i++){
