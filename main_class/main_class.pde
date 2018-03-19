@@ -18,6 +18,13 @@ int patternSeperationY = 100;
 int a,b,i,x,y;
 boolean active = true;
 
+//Six illusion variables
+PGraphics pg2;
+PImage img;
+
+//Seven illusion variables
+float x1=1;
+
 
 
 void setup() {
@@ -28,6 +35,8 @@ void setup() {
   globalAngle = 0.0;
   isometryCount = 6;
   depthStop = 2;
+  pg2 = createGraphics(640,200);
+  
 }
 
 void draw() {
@@ -58,12 +67,11 @@ void draw() {
     Bulging_Checkerboard();
     break;
   case 6: 
-    //white_xmas();
+    bananas();
     break;
   case 7:
-    //pigeon_neck();
+    otra();
     break;
-    //println("implementation is missed!");
   }
   popStyle();
 }
@@ -551,4 +559,54 @@ void Bulging_Checkerboard() {
       quad(cuadro2[0]+tamCuadro*6, cuadro2[1]+tamCuadro*l, cuadro2[2]+tamCuadro*6, cuadro2[3]+tamCuadro*l, cuadro2[4]+tamCuadro*6, cuadro2[5]+tamCuadro*l, cuadro2[6]+tamCuadro*6, cuadro2[7]+tamCuadro*l);
     }
   }
+}
+
+void bananas(){
+  surface.setSize(640,200);
+  pg2.beginDraw();
+  img = loadImage("Data/bananas.png");  
+  pg2.background(img);
+  //pg2.stroke(255);
+  pg2.endDraw();
+ image(pg2, 5, 5);
+}
+
+void otra(){
+  surface.setSize(400, 330);
+  smooth();
+  background(255);
+
+  for (int i = 0; i < 30;i++) {
+    noStroke();
+    fill(0);
+    rect(i * 20, 0, 10, height);
+  }
+
+  if (mousePressed == true) {
+    background(150);
+  }
+
+  for (int q = 0; q < 4; q++) {
+    if (q % 2 == 0) {
+      fill(0);
+    }
+    else {
+      fill(255);
+    }
+    rect(x1, q * 90 + 5, 20, 50);
+  }
+
+  if (keyPressed == true) {
+    stroke(255, 0, 0);
+    strokeWeight(3);
+    noFill();
+    rect(x1, 5, 21, 320);
+  }
+  
+  x1 += 0.5;
+ 
+  if (x1 > width + 10) {
+    x1 = 0;
+  }
+
 }
